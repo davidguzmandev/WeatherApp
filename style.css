@@ -74,3 +74,16 @@ button:hover {
   padding: 0;
   margin: 0;
 }
+
+.info {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0px 0px 2px 0px;
+  margin: 0;
+}
+
+.img {
+  margin: 0px;
+}

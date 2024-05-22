@@ -34,15 +34,15 @@ function clouds (data){
 };
 
 function getIcon (data) {
-    console.log(data.weather);
-    const url = `https://openweathermap.org/img/wn/${data.weather.icon}@2x.png`
+    const url = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+    console.log(data.weather[0].icon);
     return url
 }
 
 function showWeather(data) {
     const showData = document.getElementById('showWeather');
     showData.innerHTML = '';
-    console.log(data.weather.main);
+
     const cityName = data.name;
     const countryName = data.sys.country;
     const temp = Math.round(data.main.temp);
@@ -54,13 +54,14 @@ function showWeather(data) {
     const icon = getIcon(data);
 
     showData.innerHTML = `
+
         <p class="city">${cityName}, ${countryName}</p>
         <p class="temp">${temp}°</p>
         <p class="cloud">${cloud}</p>
+        <p class="img"><img src="${icon}" ></p>
+        <p class="info">Feels Like: ${feelsLike}°</p>
+        <p class="info">H:${tempMax}° L:${tempMin}°</p>
+        <p class="info">Humidy: ${humidity}</p>
         <br>
-        <p>Feels Like: ${feelsLike}°</p>
-        <p>H:${tempMax}° L:${tempMin}°</p>
-        <p>Humidy: ${humidity}</p>
-        <p><img src="${icon}" ></p>
     `
 }
