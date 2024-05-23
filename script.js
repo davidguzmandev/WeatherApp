@@ -1,5 +1,6 @@
 const API_KEY = 'd10cbcbfd6e094048f2b6026e76058dd'
 const url = `https://api.openweathermap.org/data/2.5/weather`
+background();
 
 document.getElementById('search').addEventListener('click', () => {
     const city = document.getElementById('city').value;
@@ -7,7 +8,7 @@ document.getElementById('search').addEventListener('click', () => {
     if (city) {
         fetchWeather(city);
     } else {
-        showError();
+        alert('Please write the name of the city');
     }
 });
 
@@ -64,4 +65,19 @@ function showWeather(data) {
         <p class="info">Humidy: ${humidity}</p>
         <br>
     `
+}
+
+function background(){
+    const d = new Date();
+    
+    const container = document.querySelector('.container');
+
+    if(d.getHours() < 10){
+        container.classList.add('containerM');
+    } else if(d.getHours() < 17){
+        container.classList.add('containerA');
+    } else {
+        container.classList.add('containerN');
+    }
+    
 }

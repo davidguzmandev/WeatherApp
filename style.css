@@ -18,6 +18,25 @@ body {
     border-radius: 10px;
     width: 30%;
     box-shadow: 0px 0px 80px 0px #505050;
+
+}
+
+.containerM{
+  background-image: url(/images/morning.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.containerA{
+  background-image: url(/images/noon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.containerN{
+  background-image: url(/images/night.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 input {
@@ -44,6 +63,7 @@ button:hover {
 
 .title {
   text-align: center;
+  text-shadow: 1px 1px 2px pink;
 }
 
 .footer {
