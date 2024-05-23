@@ -1,6 +1,6 @@
 #### Weather APP
 
-Developed with JavaScript, HTML and CSS Responsive
+Developed with JavaScript, HTML and CSS Responsive<br>
 Fetch test on Postman
 
 Used as data an API from https://openweathermap.org/
